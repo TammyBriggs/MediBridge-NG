@@ -36,5 +36,5 @@ app.use("/api/v1/appointment", appointmentRouter);
 
 dbConnection();
 
-// app.use(errorMiddleware);
+app.use(errorMiddleware);
 export default app;
