@@ -1,7 +1,7 @@
 import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
 import { User } from "../models/userSchema.js";
 import ErrorHandler from "../middlewares/error.js";
-// import { generateToken } from "../utils/jwtToken.js";
+import { generateToken } from "../utils/jwtToken.js";
 import cloudinary from "cloudinary";
 
 export const patientRegister = catchAsyncErrors(async (req, res, next) => {
@@ -59,9 +59,9 @@ export const login = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("Invalid Email Or Password!", 400));
   }
   if (role !== user.role) {
-    return next(new ErrorHandler(`User Not Found With This Role!`, 400));
+    return next(new ErrorHandler(`User With This Role Not Found!`, 400));
   }
-  generateToken(user, "Login Successfully!", 201, res);
+  generateToken(user, "Login Successful!", 201, res);
 });
 
 export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
