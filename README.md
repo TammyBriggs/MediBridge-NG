@@ -72,20 +72,21 @@ medibridge-ng/
    ```bash
    git clone https://github.com/TammyBriggs/MediBridge-NG.git
    cd MediBridge-NG
+   
 ### Backend Setup
-cd backend
-npm install
-npm run dev
+- cd backend
+- npm install
+- npm run dev
 
 ### Frontend (User) Setup
-cd frontend-user
-npm install
-npm start
-Frontend (Admin) Setup
-
-### cd frontend-admin
-npm install
-npm start
+- cd frontend-user
+- npm install
+- npm start
+  
+### Frontend (Admin) Setup
+- cd frontend-admin
+- npm install
+- npm start
 
 ## 🤝 Contributing
 Contributions are welcome! Please open issues or submit PRs to help improve MediBridge NG.
@@ -96,4 +97,4 @@ This project is licensed under the MIT License.
 ## 📢 Contact
 Tamunotonye Briggs
 Email: trenatto82@gmail.com
-GitHub: github.com/TammyBriggs
+GitHub: [github.com/TammyBriggs](https://github.com/TammyBriggs)
