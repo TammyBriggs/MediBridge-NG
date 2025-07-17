@@ -68,7 +68,7 @@ const Footer = () => {
             <h4>Contact</h4>
             <div>
               <FaPhone />
-              <span>081-8955-4426</span>
+              <span>0818-955-4426</span>
             </div>
             <div>
               <MdEmail />
