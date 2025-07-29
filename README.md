@@ -81,12 +81,12 @@ medibridge-ng/
 ### Frontend (User) Setup
 - cd frontend-user
 - npm install
-- npm start
+- npm run dev
   
 ### Frontend (Admin) Setup
 - cd frontend-admin
 - npm install
-- npm start
+- npm run dev
 
 ## 🤝 Contributing
 Contributions are welcome! Please open issues or submit PRs to help improve MediBridge NG.
