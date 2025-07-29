@@ -58,13 +58,13 @@ const Dashboard = () => {
             <div className="content">
               <div>
                 <p>Welcome,</p>
-                <h5>
-                  {admin &&
-                    `${admin.firstName} ${admin.lastName}`}{" "}
-                </h5>
+                <h5>{admin && `${admin.firstName} ${admin.lastName}`} </h5>
               </div>
               <p>
-                Manage hospital operations with ease. From patient records to appointment tracking and staff coordination, everything you need to run an efficient and modern healthcare facility is right here at your fingertips.
+                Manage hospital operations with ease. From patient records to
+                appointment tracking and staff coordination, everything you need
+                to run an efficient and modern healthcare facility is right here
+                at your fingertips.
               </p>
             </div>
           </div>
@@ -123,7 +123,13 @@ const Dashboard = () => {
                           </option>
                         </select>
                       </td>
-                      <td>{appointment.hasVisited === true ? <GoCheckCircleFill className="green"/> : <AiFillCloseCircle className="red"/>}</td>
+                      <td>
+                        {appointment.hasVisited === true ? (
+                          <GoCheckCircleFill className="green" />
+                        ) : (
+                          <AiFillCloseCircle className="red" />
+                        )}
+                      </td>
                     </tr>
                   ))
                 : "No Appointments Found!"}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Biography = ({imageUrl}) => {
+const Biography = ({ imageUrl }) => {
   return (
     <>
       <div className="container biography">
@@ -11,23 +11,21 @@ const Biography = ({imageUrl}) => {
           <p>Biography</p>
           <h3>Who We Are</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            blanditiis sequi aperiam. Debitis fugiat harum ex maxime illo
-            consequatur mollitia voluptatem omnis nihil nesciunt beatae esse
-            ipsam, sapiente totam aspernatur porro ducimus aperiam nisi. Ex
-            magnam voluptatum consectetur reprehenderit fugiat recusandae aut
-            similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
-            nesciunt laboriosam totam iusto!
+            MediBridge NG is a digital health solution designed to transform
+            public hospital management in Nigeria. Built as a full-stack web
+            application, our system streamlines patient registration,
+            appointment scheduling, medical record-keeping, and administrative
+            workflows, bridging the gap between healthcare professionals and the
+            communities they serve.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            Our goal is to make healthcare more efficient, transparent, and
+            accessible through technology. By focusing on user-friendly design
+            and scalable architecture, MediBridge NG empowers hospitals to
+            deliver better patient care while improving operational efficiency.
+            We are committed to supporting the digital transformation of
+            Africa's healthcare systems, one hospital at a time.
           </p>
-          <p>Lorem ipsum dolor sit amet!</p>
         </div>
       </div>
     </>
