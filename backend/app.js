@@ -36,5 +36,9 @@ app.use("/api/v1/appointment", appointmentRouter);
 
 dbConnection();
 
+app.get('/',(req,res)=>{
+    res.send("API Working")
+})
+
 app.use(errorMiddleware);
 export default app;
