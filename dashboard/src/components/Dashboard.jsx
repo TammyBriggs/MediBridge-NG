@@ -6,10 +6,9 @@ import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-const [doctors, setDoctors] = useState([]);
-
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
+  const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
     const fetchAppointments = async () => {
