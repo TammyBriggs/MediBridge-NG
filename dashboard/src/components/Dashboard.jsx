@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
 import { AiFillCloseCircle } from "react-icons/ai";
 
+const [doctors, setDoctors] = useState([]);
+
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
 
@@ -21,7 +23,21 @@ const Dashboard = () => {
         setAppointments([]);
       }
     };
+
+    const fetchDoctors = async () => {
+      try {
+        const { data } = await axios.get(
+          "http://localhost:4000/api/v1/user/doctors",
+          { withCredentials: true }
+        );
+        setDoctors(data.doctors);
+      } catch (error) {
+        toast.error("Failed to fetch doctors");
+      }
+    };
+
     fetchAppointments();
+    fetchDoctors();
   }, []);
 
   const handleUpdateStatus = async (appointmentId, status) => {
@@ -74,7 +90,7 @@ const Dashboard = () => {
           </div>
           <div className="thirdBox">
             <p>Registered Doctors</p>
-            <h3>10</h3>
+            <h3>{doctors.length}</h3>
           </div>
         </div>
         <div className="banner">
