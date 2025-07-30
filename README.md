@@ -60,9 +60,8 @@ medibridge-ng/
 │ ├── models/
 │ ├── routes/
 │ └── server.js
-├── frontend-user/
-├── frontend-admin/
-└── .env
+├── frontend/
+├── dashboard/
 
 ---
 
@@ -75,18 +74,25 @@ medibridge-ng/
    
 ### Backend Setup
 - cd backend
+- In the backend folder, create a config folder and within it, download and paste the config.env file there
 - npm install
 - npm run dev
 
 ### Frontend (User) Setup
-- cd frontend-user
+- cd frontend
 - npm install
 - npm run dev
   
-### Frontend (Admin) Setup
-- cd frontend-admin
+### Frontend (Admin dashboard) Setup
+- cd dashboard
 - npm install
 - npm run dev
+
+- If you encounter "TypeError: crypto.getRandomValues is not a function", when running npm run dev in the project, it is probably an issue with your Node.js version.
+- Running the following to update and use the lastest node.js version should get rid of the error.
+  ```bash
+   nvm install --lts  # Installs the latest LTS version
+   nvm use --lts      # Switches to use the latest LTS version
 
 ## 🤝 Contributing
 Contributions are welcome! Please open issues or submit PRs to help improve MediBridge NG.
