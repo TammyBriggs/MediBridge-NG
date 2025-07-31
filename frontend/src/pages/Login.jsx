@@ -14,11 +14,12 @@ const Login = () => {
   const navigateTo = useNavigate();
 
   const handleLogin = async (e) => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     e.preventDefault();
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/login",
+          backendUrl + "/api/v1/user/login",
           { email, password, confirmPassword, role: "Patient" },
           {
             withCredentials: true,

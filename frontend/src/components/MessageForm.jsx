@@ -9,12 +9,14 @@ const MessageForm = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   const handleMessage = async (e) => {
     e.preventDefault();
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/message/send",
+          backendUrl + "/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,

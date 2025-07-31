@@ -9,9 +9,11 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/patient/logout", {
+      .get(backendUrl + "/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
