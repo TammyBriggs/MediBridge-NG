@@ -212,16 +212,13 @@ export const logoutAdmin = catchAsyncErrors(async (req, res, next) => {
 
 // Logout function for frontend patient
 export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
-  const isProduction = process.env.NODE_ENV === "production";
-
   res
     .status(200)
     .cookie("patientToken", "", {
       httpOnly: true,
-      secure: isProduction,
-      sameSite: isProduction ? "None" : "Lax",
+      secure: true,
+      sameSite: "None",
       expires: new Date(0),
-      domain: isProduction ? "medibridge-ng-server.vercel.app" : undefined,
     })
     .json({
       success: true,
