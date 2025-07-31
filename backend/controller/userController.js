@@ -219,6 +219,7 @@ export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
       secure: true,
       sameSite: "None",
       expires: new Date(0),
+      domain: "medibridge-ng-server.vercel.app"
     })
     .json({
       success: true,

@@ -13,8 +13,9 @@ const Login = () => {
 
   const navigateTo = useNavigate();
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   const handleLogin = async (e) => {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     e.preventDefault();
     try {
       await axios
