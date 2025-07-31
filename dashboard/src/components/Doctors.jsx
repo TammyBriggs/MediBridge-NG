@@ -7,11 +7,12 @@ import { Navigate } from "react-router-dom";
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
   const { isAuthenticated } = useContext(Context);
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/doctors",
+          backendUrl + "/api/v1/user/doctors",
           { withCredentials: true }
         );
         setDoctors(data.doctors);

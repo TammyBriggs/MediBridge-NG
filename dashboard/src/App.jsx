@@ -23,10 +23,11 @@ const App = () => {
     useContext(Context);
 
   useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/admin/me",
+          backendUrl + "/api/v1/user/admin/me",
           {
             withCredentials: true,
           }

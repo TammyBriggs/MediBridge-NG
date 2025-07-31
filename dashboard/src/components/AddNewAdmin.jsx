@@ -18,12 +18,14 @@ const AddNewAdmin = () => {
 
   const navigateTo = useNavigate();
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   const handleAddNewAdmin = async (e) => {
     e.preventDefault();
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/admin/addnew",
+          backendUrl + "/api/v1/user/admin/addnew",
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,

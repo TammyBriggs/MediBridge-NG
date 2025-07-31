@@ -21,6 +21,8 @@ const AddNewDoctor = () => {
 
   const navigateTo = useNavigate();
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   const departmentsArray = [
     "Pediatrics",
     "Orthopedics",
@@ -58,7 +60,7 @@ const AddNewDoctor = () => {
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
       await axios
-        .post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
+        .post(backendUrl + "/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
