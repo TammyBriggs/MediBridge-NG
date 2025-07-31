@@ -202,7 +202,7 @@ export const logoutAdmin = catchAsyncErrors(async (req, res, next) => {
       httpOnly: true,
       secure: true,
       sameSite: "None",
-      expires: new Date(Date.now()),
+      expires: new Date(0),
     })
     .json({
       success: true,
@@ -218,7 +218,7 @@ export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
       httpOnly: true,
       secure: true,
       sameSite: "None",
-      expires: new Date(Date.now()),
+      expires: new Date(0),
     })
     .json({
       success: true,
