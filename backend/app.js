@@ -14,8 +14,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: "*" ,
-    // [process.env.FRONTEND_URL, process.env.DASHBOARD_URL] ,
+    origin: ["https://medibridge-ng-frontend.vercel.app/" , process.env.DASHBOARD_URL], 
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
