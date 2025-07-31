@@ -27,14 +27,33 @@ const Login = () => {
             headers: { "Content-Type": "application/json" },
           }
         )
-        .then((res) => {
+        .then(async (res) => {
           toast.success(res.data.message);
-          setIsAuthenticated(true);
-          navigateTo("/");
+
+          // ✅ Fetch current admin session info to validate and sync context
+          const userRes = await axios.get(`${backendUrl}/api/v1/user/admin/me`, {
+            withCredentials: true,
+          });
+
+          if (userRes.data.success) {
+            setIsAuthenticated(true);
+            navigateTo("/"); // ✅ Go to admin dashboard
+          }
+
+          // Clear fields
           setEmail("");
           setPassword("");
           setConfirmPassword("");
         });
+
+        // .then((res) => {
+        //   toast.success(res.data.message);
+        //   setIsAuthenticated(true);
+        //   navigateTo("/");
+        //   setEmail("");
+        //   setPassword("");
+        //   setConfirmPassword("");
+        // });
     } catch (error) {
       toast.error(error.response.data.message);
     }
